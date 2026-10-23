@@ -138,6 +138,17 @@ fprintf('SS           %8.0f          %8.0f\n', SS_AS, conc(SS_AS));
 fprintf('TKN          %8.0f          %8.1f\n', TKN_AS, conc(TKN_AS));
 fprintf('NH4-N        %8.0f          %8.0f\n', NH4_AS, conc(NH4_AS));
 
+%% 7b. Figure: loads before and after primary treatment
+figure;
+raw   = [BOD_load COD_load SS_load TKN_load];
+after = [BOD_AS COD_AS SS_AS TKN_AS];
+bar([raw; after]');
+set(gca, 'XTickLabel', {'BOD','COD','SS','TKN'});
+legend('Raw sewage', 'After primary', 'Location', 'northeast');
+ylabel('Load (kg/d)');
+title('Load before and after primary treatment');
+saveas(gcf, 'primary_loads.png');
+
 %% 8. Save results for the next stage
 save('primary_results.mat');
 
