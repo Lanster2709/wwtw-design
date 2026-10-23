@@ -8,3 +8,6 @@ site design. Assumptions and sources are documented in the Excel workbook (Input
 Notes sheets).
 
 Status: Step 1 (design basis) complete. Further steps to follow.
+
+Status: Design basis and inlet works / primary treatment sizing complete.
+Aeration tank design (sludge age, volume, oxygen demand) in progress.
