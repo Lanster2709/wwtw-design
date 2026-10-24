@@ -25,7 +25,7 @@ bCOD_BOD = 1.47;  % Biodegradable COD/BOD5 ratio
 S_e      = 5;     % Soluble bCOD remaining in the effluent (mg/L)
 Y        = 0.45;  % Biomass yield (g VSS/g bCOD)
 b20      = 0.10;  % Decay coefficient at 20 degC (1/d)
-theta_b  = 1.04;  % Temperature correction factor for decay
+theta_b  = 1.04;  % Temperature correction factor for decay (assumed typical value)
 f_d      = 0.15;  % Fraction of decayed biomass remaining as cell debris
 VSS_TSS  = 0.85;  % Ratio of VSS to TSS in biological sludge
 
@@ -61,6 +61,8 @@ for i = 1:nT
     % Calculate the nitrifier growth rate at the current temperature
     % Account for the effects of temperature, ammonia and dissolved oxygen
     f_T = exp(0.098 * (T - 15));
+
+   % Half-saturation constant for ammonia vs temperature (empirical formula from the vtsv.org example)
     K_n = 10^(0.051 * T - 1.158);
 
     mu_n = (mu_n15 * f_T) * (N_e / (K_n + N_e)) * (DO / (K_o + DO));
