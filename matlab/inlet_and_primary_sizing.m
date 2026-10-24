@@ -107,7 +107,7 @@ NH4_AS = NH4_load;
 SS_sludge = SS_load * rem_SS;
 
 % Convert loads in kg/d to concentrations in mg/L
-conc = @(load) load * 1000 / DWF;
+conc = @(x) x * 1000 / DWF;
 
 %% 7. Display design results
 fprintf('\nSCREENS\n');
