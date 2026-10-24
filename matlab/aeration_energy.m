@@ -47,8 +47,8 @@ eff_f   = Ro / (P * 24);                                       % Field efficienc
 eff_s   = SOTR / P;                                            % Standard efficiency (kg O2/kWh)
 
 %% 5. Compare with benchmarks
-share_low  = 0.25;     % Lower estimate of aeration's energy share
-share_high = 0.60;     % Upper estimate of aeration's energy share
+share_low  = 0.25;     % Lower estimate of aeration's share of plant energy (ORNL)
+share_high = 0.60;     % Upper estimate of aeration's share of plant energy (ORNL)
 total_low  = E_perPE / share_high;
 total_high = E_perPE / share_low;
 
@@ -106,8 +106,8 @@ subplot(1, 2, 2);
 plot(alpha_vec, eff_vec, '-o');
 hold on;
 plot(alpha, eff_f, 'rs', 'MarkerFaceColor', 'r');
-plot([alpha_vec(1) alpha_vec(end)], [0.91 0.91], 'k--');
-plot([alpha_vec(1) alpha_vec(end)], [1.40 1.40], 'k--');
+plot([alpha_vec(1) alpha_vec(end)], [0.91 0.91], 'k--'); % ORNL range, converted from lb O2/hp-h to kg O2/kWh
+plot([alpha_vec(1) alpha_vec(end)], [1.40 1.40], 'k--'); % ORNL range, converted from lb O2/hp-h to kg O2/kWh
 xlabel('Alpha factor');
 ylabel('Field efficiency (kg O2/kWh)');
 title('Efficiency (dashed: ORNL range)');
