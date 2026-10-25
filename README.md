@@ -5,8 +5,8 @@ A preliminary process design of a municipal wastewater treatment works for 50,00
 This is a hand-calculation-level preliminary design based on textbook and guidance values. It is not site data and not a detailed design. The assumptions are listed in the workbook (Notes sheet) and the sources are on its Sources sheet.
 
 ## Status
+Steps 1 to 5 are complete: design basis, inlet works and primary settlement, aeration tank, secondary clarifiers, and air supply with energy use. Costing is not included.
 
-Steps 1 to 5 are complete. Still to come: costing and whole-life cost.
 
 ## Contents
 
